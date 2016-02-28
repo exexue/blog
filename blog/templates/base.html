@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>{%block title %}{% endblock %} 雪血博客 </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+{% load staticfiles %}
+
+    <!-- Custom styles for this template -->
+    <link href="{%static 'blog.css'%}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+{% load staticfiles %}
+<script type="text/javascript" src="{%static 'x/scripts/shCore.js'%}"></script>
+{% load staticfiles %}
+<script type="text/javascript" src="{%static 'x/scripts/shBrushPython.js'%}"></script>
+{% load staticfiles %}
+<script type="text/javascript" src="{%static 'x/scripts/shBrushCpp.js'%}"></script>
+
+<link type="text/css" rel="stylesheet" href="{%static 'x/styles/shCoreDefault.css'%}"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+  </head>
+
+  <body>
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item active" href="{% url 'index'%}">Home</a>
+          {%  for i in category %}
+
+          <a class="blog-nav-item" href="{% url 'list' i.id %}">{{ i.name }}</a>
+          {% endfor %} 
+          <a class="blog-nav-item" href="#">About</a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="blog-header">
+
+        <p class="lead blog-description"> 网络就是江湖，有人的地方就有网络，有网络的地方就有恩怨情仇</p>
+      </div>
+
+      <div class="row">
+                {% block boby%}
+                {%endblock%}
+
+        
+
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>关于我</h4>
+            <p>邮箱：5878408@qq.com
+</p>
+
+数据挖掘爱好者<br/>
+搜索引擎爱好者<br/>
+网络协议爱好者<br/>
+影视制作爱好者(非高手)<br/>
+业余摄影爱好者(非高手)<br/>
+业余桌球爱好者(非高手)<br/>
+乒乓球爱好者(非高手)<br/>
+羽毛球爱好者(非高手)<br/>
+<br/>
+          </div>
+         
+
+
+ <div class="sidebar-module">
+            <h4>Comment</h4>
+
+
+
+
+
+
+
+<!-- 多说最新评论 start -->
+
+<div class="ds-recent-comments" data-num-items="7" data-show-avatars="0" data-show-time="1" data-show-title="1" data-show-admin="1" data-excerpt-length="70"></div>
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"exexue"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+          </div>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <div class="sidebar-module">
+            <h4>Category</h4>
+            <ol class="list-unstyled">
+            {%  for i in category %}
+
+
+              <li><a href=" {%url 'list' i.id%}">{{i.name}}</a></li>
+             {% endfor %} 
+            </ol>
+          </div>
+
+
+
+
+
+
+
+
+          
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="http://freehao123.com">免费部落</a></li>
+              <li><a href="#">Google</a></li>
+              <li><a href="#">雪血博客</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="http://exexue.com">@exexue</a>.</p>
+      <p>
+        
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/18743982.js"></script>
+<noscript><a href="http://www.51.la/?18743982" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/18743982.asp" style="border:none" /></a></noscript>
+
+
+
+
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,21 @@
+{% load staticfiles %} 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>完整demo</title>
+
+	<script type="text/javascript" src="{%static 'x/scripts/shCore.js'%}"></script>
+	{% load staticfiles %}<script type="text/javascript" src="{%static 'x/scripts/shBrushPython.js'%}"></script>
+	{% load staticfiles %}<link type="text/css" rel="stylesheet" href="{%static 'x/styles/shCoreDefault.css'%}"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+
+
+<body style="background: white; font-family: Helvetica">
+
+<h1>{{title}}</h1>
+
+<h5>{{category}}</h5>
+{{concent|safe}}
+</html>
